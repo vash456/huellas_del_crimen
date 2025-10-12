@@ -1,0 +1,16 @@
+.carousel-item{
+    
+     max-height: 60vh;
+     
+}
+@font-face {
+    font-family: "maquina";
+    src: url(Fuente/butterbrotpapier.ttf);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 90vh; /* o el tamaño que quieras, 100vh ocupa toda la pantalla */
+  object-fit: cover; /* hace que la imagen se recorte sin deformarse */
+  object-position: center; /* centra la imagen vertical y horizontalmente */
+}
