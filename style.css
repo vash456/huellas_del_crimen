@@ -14,3 +14,7 @@
   object-fit: cover; /* hace que la imagen se recorte sin deformarse */
   object-position: center; /* centra la imagen vertical y horizontalmente */
 }
+
+.img-logo{
+  width: 80px;
+}
