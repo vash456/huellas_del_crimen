@@ -26,7 +26,7 @@ html{
   border-radius: 10px;  /* opcional: bordes suaves */
 }
 
-.card img {
+.card .img-targeta {
   width: 100%;
 }
 
