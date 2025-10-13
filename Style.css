@@ -1,11 +1,14 @@
 .carousel-item{
     
-     max-height: 60vh;
+  max-height: 60vh;
      
 }
 @font-face {
     font-family: "maquina";
-    src: url(Fuente/butterbrotpapier.ttf);
+    src: url(butterbrotpapier.ttf);
+}
+html{
+    font-family: "maquina";
 }
 
 .carousel-item img {
@@ -14,11 +17,18 @@
   object-fit: cover; /* hace que la imagen se recorte sin deformarse */
   object-position: center; /* centra la imagen vertical y horizontalmente */
 }
+
+
+.card-img-top {
+  height: 500px;        /* ajusta la altura total */
+  object-fit: cover;    /* recorta la imagen sin deformarla */
+  object-position: center; /* centra el recorte */
+  border-radius: 10px;  /* opcional: bordes suaves */
+}
+
 .card img {
   width: 100%;
 }
-  
-
 
 .img-logo{
   width: 80px;
