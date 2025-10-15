@@ -1,11 +1,11 @@
 
 @font-face {
   font-family: "maquina";
-  src: url("Mom«t___.ttf") 
+  src: url("fuente/Maquina.ttf")format("truetype");
  
 }
-html{
-    font-family: "maquina";
+html body{
+    font-family: "maquina" !important;
     color: white;
 }
 .carousel-item{
