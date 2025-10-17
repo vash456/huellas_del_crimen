@@ -39,6 +39,10 @@ body {
   object-position: center; /* centra el recorte */
   border-radius: 10px;  /* opcional: bordes suaves */
 }
+.card .card-body{
+background-color: #212529;
+color: white;
+}
 
 .card .img-targeta {
   width: 100%;
