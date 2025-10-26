@@ -7,6 +7,7 @@
 html body{
     font-family: "maquina" !important;
     color: white;
+    background-color: black;
 }
 .carousel-item{
     
@@ -14,7 +15,7 @@ html body{
      
 }
 
-body {
+/* body {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -24,20 +25,24 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
+ */
 .carousel-item img {
   width: 100%;
-  height: 90vh; /* o el tamaño que quieras, 100vh ocupa toda la pantalla */
-  object-fit: cover; /* hace que la imagen se recorte sin deformarse */
-  object-position: center; /* centra la imagen vertical y horizontalmente */
+  height: 60vh; 
+  object-fit: cover; 
+  object-position: center; 
 }
 
 
 .card-img-top {
-  height: 500px;        /* ajusta la altura total */
-  object-fit: cover;    /* recorta la imagen sin deformarla */
-  object-position: center; /* centra el recorte */
-  border-radius: 10px;  /* opcional: bordes suaves */
+  height: 500px;   
+  object-fit: cover;  
+  object-position: center; 
+  border-radius: 10px;  
+}
+.card .card-body{
+background-color: #212529;
+color: white;
 }
 
 .card .img-targeta {
@@ -49,8 +54,8 @@ body {
 }
 
 .contenedor-codigo {
-  background-color: #1e1e1e; /* Fondo oscuro tipo VS Code */
-  color: #d4d4d4; /* Texto gris claro */
+  background-color: #1e1e1e; 
+  color: #d4d4d4; 
   font-family: "Fira Code", monospace;
   margin-left: 2%;
   margin-right: 2%;
