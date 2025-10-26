@@ -64,3 +64,10 @@ pre {
     font-size: 14px;
     line-height: 1.5;
 }
+
+.footerbcd{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
