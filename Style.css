@@ -53,6 +53,53 @@ color: white;
   width: 80px;
 }
 
+.quienes-somos{
+  margin: 10%;
+  text-align: center;
+  background-color: black;
+  padding: 12px;
+  /* border-radius: 20px;
+  box-shadow: 3px 9px 22px -1px #6f120b; */
+}
+
+.quienes-somos h1{
+  color: #6f120b;
+  margin-bottom: 6%;
+  font-size: 60px;
+}
+
+.quienes-somos:hover{
+  transform: translateY(-0.5rem);
+  transition: transform 0.5s ease;
+}
+
+.mision, .vision{
+  display: flex;
+  margin: 10%;
+  text-align: center;
+  padding: 12px;
+  border-radius: 20px;
+}
+
+.mision-img, .mision-t, .vision-img, .vision-t{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mision-t h2, .vision-t h2{
+  color: #6f120b;
+  margin-bottom: 10%;
+  font-size: 40px;
+}
+
+.mision-img img, .vision-img img{
+  width: 80%;
+}
+
+
 .contenedor-codigo {
   background-color: #1e1e1e; 
   color: #d4d4d4; 
