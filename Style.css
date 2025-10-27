@@ -33,6 +33,13 @@ html body{
   object-position: center; 
 }
 
+.col, .card{
+  border: 2px #000000 !important;
+}
+
+.card{
+  min-height: 45vh;
+}
 
 .card-img-top {
   height: 500px;   
@@ -45,8 +52,15 @@ background-color: #212529;
 color: white;
 }
 
-.card .img-targeta {
+.card-img-targeta {
   width: 100%;
+  min-height: 30vh;
+}
+
+
+.card:hover{
+  transform: scale(1.01);
+  transition: transform 0.5s;
 }
 
 .img-logo{
@@ -99,6 +113,33 @@ color: white;
   width: 80%;
 }
 
+.servicios{
+  margin-top: 50px;
+}
+
+.servicios h1{
+  text-align: center;
+  color: #6f120b;
+  font-size: 60px;
+}
+
+.servicios h2{
+  text-align: center;
+  margin-top: 50px;
+  color: #6f120b;
+}
+
+.servicios p{
+  text-align: center;
+  margin-top: 40px;
+}
+
+.nuestros-servicios{
+  margin-top: 100px;
+  text-align: center;
+  color: #6f120b;
+  margin-bottom: 40px;
+}
 
 .contenedor-codigo {
   background-color: #1e1e1e; 
