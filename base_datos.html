@@ -2,69 +2,230 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="Imagenes/BCDGAMES.png" type="image/x-icon">
-    <title>Base de datos</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="Imagenes/BCDGAMES.png" type="image/x-icon">
+  <title>Base de datos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="Imagenes/BCDGAMES.png" class="img-logo" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="juegos.html">Juegos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="crud.html">CRUD</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="base_datos.html">Modelo DB</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="logica.html">Logica</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactos.html">Contactenos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Quienes somos</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- editor codigo -->
-    <h2>Ejemplo de código:</h2>
-    <div class="contenedor-codigo">
-        <pre><code>
-            // codigo de script base de datos
-            funcion imprimir(){
-
-            }
-            console.log(saludar());
-        </code></pre>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="Imagenes/BCDGAMES.png" class="img-logo" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicios.html">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="juegos.html">Juegos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="crud.html">CRUD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="base_datos.html">Modelo DB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logica.html">Logica</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactos.html">Contactenos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nosotros.html">Quienes somos</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-     <!-- Footer -->
+  <!-- editor codigo -->
+  <h2>Base De Datos Del Proyecto</h2>
+  <p>
+    En esta sección se presenta la base de datos que da estructura y vida a Huellas del Crimen. Aquí se organizan los
+    escenarios, personajes, pistas y eventos narrativos que conforman la experiencia del jugador. Cada elemento está
+    interconectado para permitir una historia dinámica, donde las decisiones, interrogatorios y descubrimientos
+    determinan el rumbo del caso.
+  </p>
+  <br>
+  <div class="contenedor-codigo">
+    <pre><code>
+          -- =====================================================
+          -- CREACIÓN BASE DE DATOS
+          -- =====================================================
+          CREATE DATABASE DB_JUEGO_HUELLAS_DEL_CRIMEN;
+          GO
+          USE DB_JUEGO_HUELLAS_DEL_CRIMEN;
+          GO
+
+          -- =====================================================
+          -- TABLAS PRINCIPALES
+          -- =====================================================
+
+          -- Usuarios
+          CREATE TABLE usuarios (
+              nickname VARCHAR(50) PRIMARY KEY,
+              correo VARCHAR(100) NOT NULL,
+              pais VARCHAR(50) NOT NULL,
+              fecha_registro DATE DEFAULT GETDATE()
+          );
+
+          -- Escenarios
+          CREATE TABLE escenarios (
+              id_escenario INT IDENTITY(1,1) PRIMARY KEY,
+              nombre VARCHAR(100),
+              imagen VARCHAR(100)
+          );
+
+          -- Personajes
+          CREATE TABLE personajes (
+              id_personaje INT IDENTITY(1,1) PRIMARY KEY,
+              nombre_completo VARCHAR(100),
+              edad TINYINT,
+              ocupacion VARCHAR(100),
+              caracteristica1 VARCHAR(50),
+              caracteristica2 VARCHAR(50),
+              caracteristica3 VARCHAR(50),
+              imagen VARCHAR(100)
+          );
+
+          -- Pistas
+          CREATE TABLE pistas (
+              id_pista INT IDENTITY(1,1) PRIMARY KEY,
+              nombre_pista VARCHAR(100),
+              descripcion TEXT,
+              imagen VARCHAR(100),
+              id_escenario INT,
+              CONSTRAINT fk_pistas_escenarios FOREIGN KEY (id_escenario) REFERENCES escenarios(id_escenario)
+          );
+
+          -- Preguntas
+          CREATE TABLE preguntas (
+              id_pregunta INT IDENTITY(1,1) PRIMARY KEY,
+              pregunta TEXT,
+              respuesta_esperada TEXT
+          );
+
+          -- Relación preguntas - personajes
+          CREATE TABLE preguntas_personaje (
+              id_pregunta_personaje INT IDENTITY(1,1) PRIMARY KEY,
+              id_personaje INT,
+              id_pregunta INT,
+              respuesta TEXT,
+              CONSTRAINT fk_preguntas_personajes_personajes FOREIGN KEY (id_personaje) REFERENCES personajes(id_personaje),
+              CONSTRAINT fk_preguntas_personajes_preguntas FOREIGN KEY (id_pregunta) REFERENCES preguntas(id_pregunta)
+          );
+
+          -- Causa Asesinato
+          CREATE TABLE causa_asesinato (
+              id_causa INT IDENTITY(1,1) PRIMARY KEY,
+              nombre_causa VARCHAR (100),
+              descripcion TEXT
+          );
+
+          -- Juegos
+          CREATE TABLE juego (
+              id_juego INT IDENTITY(1,1) PRIMARY KEY,
+              id_pregunta INT,
+              id_escenario INT,
+              id_pista INT,
+              nickname VARCHAR(50),
+              estado VARCHAR(20) DEFAULT 'EN_PROGRESO',
+              fecha_inicio DATE DEFAULT GETDATE(),
+              fecha_fin DATE,
+              CONSTRAINT fk_juego_preguntas FOREIGN KEY (id_pregunta) REFERENCES preguntas(id_pregunta),
+              CONSTRAINT fk_juego_escenario FOREIGN KEY (id_escenario) REFERENCES escenarios(id_escenario),
+              CONSTRAINT fk_juego_pistas FOREIGN KEY (id_pista) REFERENCES pistas(id_pista),
+              CONSTRAINT fk_juego_usuarios FOREIGN KEY (nickname) REFERENCES usuarios(nickname)
+          );
+
+          -- Personajes en juego
+          CREATE TABLE personajes_en_juego (
+              id_personaje_en_juego INT IDENTITY(1,1) PRIMARY KEY,
+              id_juego INT,
+              id_personaje INT,
+              id_causa INT,
+              rol VARCHAR(20), -- 'testigo', 'culpable', 'sospechoso'
+              CONSTRAINT fk_personajejuego_juego FOREIGN KEY (id_juego) REFERENCES juego(id_juego),
+              CONSTRAINT fk_personajejuego_personaje FOREIGN KEY (id_personaje) REFERENCES personajes(id_personaje),
+              CONSTRAINT fk_personajejuego_causa FOREIGN KEY (id_causa) REFERENCES causa_asesinato (id_causa)
+          );
+
+          -- Acciones jugador
+          CREATE TABLE acciones_jugador (
+              id_accion INT IDENTITY(1,1) PRIMARY KEY,
+              id_juego INT,
+              nickname VARCHAR(50),
+              tipo_accion VARCHAR(50), -- 'mirar','hablar','recoger','usar','moverse'
+              id_objetivo INT NULL,    -- id_personaje, id_pista, id_escenario
+              descripcion TEXT,
+              fecha_accion DATETIME DEFAULT GETDATE(),
+              CONSTRAINT fk_accionesjugador_juego FOREIGN KEY (id_juego) REFERENCES juego(id_juego),
+              CONSTRAINT fk_accionesjugador_usuarios FOREIGN KEY (nickname) REFERENCES usuarios(nickname)
+          );
+
+          -- Pistas descubiertas
+          CREATE TABLE pistas_descubiertas (
+              id_pista_descubierta INT IDENTITY(1,1) PRIMARY KEY,
+              id_juego INT,
+              id_pista INT,
+              encontrada BIT DEFAULT 0,
+              fecha_descubierta DATETIME DEFAULT GETDATE(),
+              CONSTRAINT fk_pistasdescubiertas_juego FOREIGN KEY (id_juego) REFERENCES juego(id_juego),
+              CONSTRAINT fk_pistasdescubiertas_pistas FOREIGN KEY (id_pista) REFERENCES pistas(id_pista)
+          );
+
+          -- =====================================================
+          -- TABLAS NUEVAS: NARRACIÓN Y ORDEN DE HISTORIA
+          -- =====================================================
+
+          -- Narración (texto del narrador)
+          CREATE TABLE narracion (
+              id_narracion INT IDENTITY(1,1) PRIMARY KEY,
+              texto TEXT,
+              orden INT
+          );
+
+          -- Eventos Historia (timeline de la partida)
+          CREATE TABLE eventos_historia (
+              id_evento INT IDENTITY(1,1) PRIMARY KEY,
+              orden INT NOT NULL,
+              tipo_evento VARCHAR(50), -- 'narrador','dialogo','pregunta','pista','accion'
+              id_referencia INT,       -- apunta a narrador.id_narrador, preguntas.id_pregunta, pistas.id_pista, etc.
+              descripcion TEXT,
+              id_escenario INT NULL,
+              CONSTRAINT fk_eventos_historia_escenarios FOREIGN KEY (id_escenario) REFERENCES escenarios(id_escenario)
+          );
+            
+        </code></pre>
+  </div>
+  <section class="base-datos">
+    <h2>Estructura de la Base de Datos</h2>
+    <p>
+      Este diagrama representa la arquitectura de datos de <strong>Huellas del Crimen</strong>,
+      mostrando las conexiones entre personajes, pistas, escenarios y eventos narrativos que
+      estructuran el desarrollo del caso.
+    </p>
+
+    <img src="Imagenes/diagramadb.jpeg" alt="Diagrama de la base de datos" class="imagen-bd">
+  </section>
+
+
+
+  <!-- Footer -->
   <footer class="bg-dark text-light pt-4">
     <div class="container">
       <div class="row">
@@ -79,9 +240,12 @@
         <!-- Redes sociales -->
         <div class="col-md-4 mb-3">
           <h5>Síguenos</h5>
-          <a href="https://www.facebook.com/" target="_blank" class="text-light me-3 fs-4"><i class="bi bi-facebook"></i></a>
-          <a href="https://web.whatsapp.com/" target="_blank" class="text-light me-3 fs-4"><i class="bi bi-whatsapp"></i></a>
-          <a href="https://www.instagram.com/" target="_blank" class="text-light me-3 fs-4"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/" target="_blank" class="text-light me-3 fs-4"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://web.whatsapp.com/" target="_blank" class="text-light me-3 fs-4"><i
+              class="bi bi-whatsapp"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" class="text-light me-3 fs-4"><i
+              class="bi bi-instagram"></i></a>
           <a href="https://www.linkedin.com/" target="_blank" class="text-light fs-4"><i class="bi bi-linkedin"></i></a>
         </div>
 
@@ -103,9 +267,9 @@
     </div>
   </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

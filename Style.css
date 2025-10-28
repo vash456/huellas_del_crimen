@@ -148,6 +148,36 @@ color: white;
   margin-left: 2%;
   margin-right: 2%;
 }
+.base-datos {
+  text-align: center;
+  color: #f0f0f0;
+  margin: 60px auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.base-datos h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.base-datos p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.imagen-bd {
+  width: 100%;
+  max-width: 950px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  display: block;
+  margin: 0 auto;
+}
+
+
 
 pre {
     background-color: #1e1e1e;
