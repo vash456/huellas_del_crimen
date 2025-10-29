@@ -53,14 +53,97 @@
     </nav>
 
     <!-- editor codigo -->
-    <h2>Ejemplo de código:</h2>
+    <div class="quienes-somos"><h1>Logica de programación</h1>
+    <h2>Maquina expendedora de dulces:</h2>
+    <p>
+      <p>Ejercicio realizado en logica de programación usando lenguaje de java que simula una maquina expendedora de dulces que contiene cinco tipos de dulces con sus respectivos precios.</p>
+      <p>El usuario ingresa inicialmente el saldo, luego el programa despliega el menú con los dulces, sus precios y el usuario elige el dulce que desea comprar, indicando el número del 
+      producto.</p> 
+      <p>El programa verifica si el saldo es el suficienta para continuar con la compra, descuenta el monto y muestra el saldo restante.
+      Al final el programa muestra el total gastado y el saldo final.</p>
+    </p>
+    </div> 
     <div class="contenedor-codigo">
         <pre><code>
-            // codigo de Logico
-            funcion imprimir(){
+    import java.util.Scanner;
+
+    public class MaquinaDeDulces {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            final String[] DULCES = {"Chocobons","Mentas","Galletas","Chocolatina","Trululu"};
+            double[] precios = {1200, 800, 1500, 1000, 700};
+            double saldo = -1;
+            int seleccionMenu = 0;
+            double total = 0;
+            double precioMayor = 0;
+
+            // precio mayor
+            precioMayor = precios[0];
+            for (double precio : precios) {
+                if (precio > precioMayor) precioMayor = precio;
+            }
+
+            while (true){
+                try {
+                    System.out.println("Ingrese su saldo: ");
+                    saldo = sc.nextDouble();
+                }catch (RuntimeException e){
+                    System.out.println("Error: Debe ingresar un valor valido");
+                    sc.nextLine();
+                }
+                if (saldo == 0){
+                    System.out.println("Debe ingresar un valor mayor a cero !!!");
+                }else if (saldo > 0){
+                    break;
+                }
+            }
+
+            while (true){
+                System.out.println("\nMenu Dulces:");
+                for (int i = 0; i < DULCES.length; i++) {
+                    System.out.println((i+1) + ". " + DULCES[i] + " - $" + precios[i]);
+                }
+                System.out.println((DULCES.length+1) + ". Salir");
+                System.out.print(":");
+
+                try{
+                    seleccionMenu = sc.nextInt();
+                    if (seleccionMenu > 0 && seleccionMenu <= DULCES.length+1){
+                        if ((saldo-precios[seleccionMenu-1] >= 0)){
+                            saldo-=precios[seleccionMenu-1];
+                            total+= precios[seleccionMenu-1];
+                            System.out.println("Elegiste " + DULCES[seleccionMenu-1] + " 😁");
+                            System.out.println("Saldo restante: $" + saldo);
+
+                            if (saldo == 0 || saldo < precioMayor){
+                                System.out.println("Te quedaste sin saldo suficiente!");
+                                break;
+                            }
+                        } else {
+                            System.out.println("Saldo insuficiente. Recarga o elige otro producto");
+                        }
+                    } else {
+                        System.out.println("Opcion no valida!");
+                    }
+
+                    if (seleccionMenu == DULCES.length+1){
+                        System.out.println("Elegiste Salir");
+                        break;
+                    }
+                }catch (RuntimeException e){
+                    System.out.println("Error: Debe ingresar un valor valido");
+                    sc.nextLine();
+                }
 
             }
-            console.log(saludar());
+
+            System.out.println("\nGracias por usar la maquina de dulces inteligente.");
+            System.out.println("Total gastado: $" + total);
+            System.out.println("Saldo final: $" + saldo);
+
+        }
+    }
+              
         </code></pre>
     </div>
 

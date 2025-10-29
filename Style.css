@@ -82,6 +82,11 @@ color: white;
   font-size: 60px;
 }
 
+.quienes-somos h2{
+   color: #6f120b;
+  margin-bottom: 6%;
+}
+
 .quienes-somos:hover{
   transform: translateY(-0.5rem);
   transition: transform 0.5s ease;
