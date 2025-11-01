@@ -231,3 +231,84 @@ pre {
   left: 0;
   width: 100%;
 }
+/* ==== ESTILO EXTRA PARA CRUD ==== */
+        body {
+            background-color: #0a0a0a;
+            color: #f1f1f1;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2.3rem;
+            letter-spacing: 1px;
+            color: #d90429;
+            text-shadow: 0 0 10px #d90429a8;
+        }
+        .crud-container {
+            max-width: 900px;
+            margin: auto;
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #000;
+        }
+        label {
+            font-weight: 600;
+            color: #ccc;
+        }
+        .form-control, .form-select {
+            background-color: #1b1b1b;
+            border: 1px solid #333;
+            color: #fff;
+        }
+        .form-control:focus, .form-select:focus {
+            background-color: #1b1b1b;
+            border-color: #d90429;
+            box-shadow: 0 0 5px #d90429;
+            color: #fff;
+        }
+        .btn-custom {
+            background-color: #d90429;
+            color: white;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #a1031f;
+        }
+        .btn-secondary-custom {
+            background-color: #343a40;
+            color: #fff;
+            border: 1px solid #555;
+            transition: 0.3s;
+        }
+        .btn-secondary-custom:hover {
+            background-color: #495057;
+        }
+        table {
+            margin-top: 30px;
+        }
+        th {
+            background-color: #2a2a2a;
+            color: #d90429;
+            text-transform: uppercase;
+        }
+        td {
+            background-color: #1b1b1b;
+        }
+        .btn-action {
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .btn-edit {
+            background-color: #3a86ff;
+        }
+        .btn-delete {
+            background-color: #ef233c;
+        }
+        .btn-edit:hover { background-color: #2656a8; }
+        .btn-delete:hover { background-color: #a10f21; }

@@ -62,47 +62,59 @@
         </p>
     </div>
 
-    <!-- editor codigo -->
-    <h2>Ejemplo de código:</h2>
-    <div class="contenedor-codigo">
-        <pre><code>
-            // codigo de CRUD
+    <div class="crud-container">
+    <h1>Gestión de Usuarios</h1>
 
-            // Create
-            INSERT INTO usuarios (nickname, correo, pais) VALUES
-            ('Detective_Bryan', 'bryan@example.com', 'Colombia'),
-            ('broodh', 'broodh@example.com', 'Colombia'),
-            ('killer45', 'killer45@example.com', 'Mexico'),
-            ('luis234', 'luis234@example.com', 'Peru'),
-            ('darkBlood', 'darkBlood@example.com', 'Ecuador');
+    <form>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="nickname" class="form-label">Nickname</label>
+          <input type="text" class="form-control" id="nickname" placeholder="Ej. Detective_Zero">
+        </div>
+        <div class="col-md-6">
+          <label for="correo" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="correo" placeholder="usuario@correo.com">
+        </div>
+        <div class="col-md-6">
+          <label for="pais" class="form-label">País</label>
+          <input type="text" class="form-control" id="pais" placeholder="Colombia">
+        </div>
+        <div class="col-md-6">
+          <label for="fecha" class="form-label">Fecha de Registro</label>
+          <input type="date" class="form-control" id="fecha">
+        </div>
+      </div>
 
-            
+      <div class="text-center mt-4 d-flex justify-content-center gap-3">
+        <button type="submit" class="btn btn-custom px-4">Guardar Usuario</button>
+        <button type="button" class="btn btn-secondary-custom px-4">Consultar Usuarios</button>
+      </div>
+    </form>
 
-            // Read
-            SELECT nickname, correo, pais, fecha_registro 
-            FROM usuarios;
-
-            SELECT nickname, correo, pais, fecha_registro 
-            FROM usuarios
-            WHERE pais = 'Colombia';
-
-            // Update
-            UPDATE usuarios
-            SET correo = 'dark123@example.com'
-            WHERE nickname = 'darkBlood';
-
-            UPDATE usuarios
-            SET pais = 'Colombia'
-            WHERE nickname = 'luis234';
-
-            // DELETE
-            DELETE FROM usuarios
-            WHERE nickname = 'killer45'
-
-
-
-        </code></pre>
-    </div>
+    <table class="table table-dark table-striped mt-5 text-center">
+      <thead>
+        <tr>
+          <th>Nickname</th>
+          <th>Correo</th>
+          <th>País</th>
+          <th>Fecha Registro</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Detective_Zero</td>
+          <td>zero@huellas.com</td>
+          <td>Colombia</td>
+          <td>2025-11-01</td>
+          <td>
+            <button class="btn-action btn-edit">Editar</button>
+            <button class="btn-action btn-delete">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
     <!-- Footer -->
   <footer class="bg-dark text-light pt-4">
