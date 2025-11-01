@@ -13,6 +13,8 @@
 </head>
 
 <body>
+
+  <header>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
         <div class="container-fluid">
@@ -51,16 +53,54 @@
             </div>
         </div>
     </nav>
+  </header>
+    
+    <div class="quienes-somos">
+        <h1>CRUD</h1>
+        <p>
+          Se muestra ejemplo de codigo del CRUD (Create, Read, Update, Delete) para la tabla usuarios de la base de datos del juego Huellas del crimen.
+        </p>
+    </div>
 
     <!-- editor codigo -->
     <h2>Ejemplo de código:</h2>
     <div class="contenedor-codigo">
         <pre><code>
             // codigo de CRUD
-            funcion imprimir(){
 
-            }
-            console.log(saludar());
+            // Create
+            INSERT INTO usuarios (nickname, correo, pais) VALUES
+            ('Detective_Bryan', 'bryan@example.com', 'Colombia'),
+            ('broodh', 'broodh@example.com', 'Colombia'),
+            ('killer45', 'killer45@example.com', 'Mexico'),
+            ('luis234', 'luis234@example.com', 'Peru'),
+            ('darkBlood', 'darkBlood@example.com', 'Ecuador');
+
+            
+
+            // Read
+            SELECT nickname, correo, pais, fecha_registro 
+            FROM usuarios;
+
+            SELECT nickname, correo, pais, fecha_registro 
+            FROM usuarios
+            WHERE pais = 'Colombia';
+
+            // Update
+            UPDATE usuarios
+            SET correo = 'dark123@example.com'
+            WHERE nickname = 'darkBlood';
+
+            UPDATE usuarios
+            SET pais = 'Colombia'
+            WHERE nickname = 'luis234';
+
+            // DELETE
+            DELETE FROM usuarios
+            WHERE nickname = 'killer45'
+
+
+
         </code></pre>
     </div>
 
